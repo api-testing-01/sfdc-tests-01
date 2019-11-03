@@ -4,3 +4,7 @@
 /out/
 *.iml
 /java/
+config.json
+/gradle/
+gradlew
+gradlew.bat
