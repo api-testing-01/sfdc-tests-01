@@ -1,0 +1,13 @@
+{
+  "sfdc": {
+    "credentials": {
+      "admin": {
+        "clientId" : "",
+        "clientSecret" : "",
+        "securityToken": "",
+        "userName": "",
+        "password": ""
+      }
+    }
+  }
+}
