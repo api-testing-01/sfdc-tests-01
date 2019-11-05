@@ -1,5 +1,7 @@
 package org.fundacionjala.sfdc;
 
+import io.restassured.response.Response;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,6 +24,7 @@ public final class EndpointHelper {
 
     private static String getElementResponse(final ScenarioContext context, final String element) {
         String[] elementSplit = element.split("\\.");
-        return context.get(elementSplit[0]).jsonPath().getString(elementSplit[1]);
+        Response response = (Response) context.get(elementSplit[0]);
+        return response.jsonPath().getString(elementSplit[1]);
     }
 }
