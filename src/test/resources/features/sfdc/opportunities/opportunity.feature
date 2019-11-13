@@ -14,7 +14,7 @@ Feature: Opportunities
     """
     And I save the response as "O"
 
-  Scenario: PATCH Accounts
+  Scenario: PATCH Opportunities
     When I send a "PATCH" request to "/sobjects/Opportunity/{O.id}" with json body
     """
     {
