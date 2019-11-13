@@ -1,4 +1,4 @@
-package org.fundacionjala.sfdc;
+package org.fundacionjala.core.api;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

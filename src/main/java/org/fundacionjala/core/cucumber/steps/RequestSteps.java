@@ -1,4 +1,6 @@
-package org.fundacionjala.sfdc.steps;
+package org.fundacionjala.core.cucumber.steps;
+
+import java.util.Map;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -6,29 +8,21 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.fundacionjala.core.*;
-import org.fundacionjala.core.api.DynamicIdHelper;
-import org.fundacionjala.core.api.RequestManager;
-import org.fundacionjala.sfdc.RequestSpecFactory;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 
-import java.util.Map;
+import org.fundacionjala.core.JsonHelper;
+import org.fundacionjala.core.ScenarioContext;
+import org.fundacionjala.core.api.DynamicIdHelper;
+import org.fundacionjala.core.api.RequestManager;
 
 public class RequestSteps {
 
-    private RequestSpecification requestSpecification;
     private Response response;
     private ScenarioContext context;
 
     public RequestSteps(final ScenarioContext context) {
         this.context = context;
-    }
-
-    @Given("I use the {string} service and the {string} account")
-    public void iUseTheService(final String serviceName, final String accountName) {
-        requestSpecification = RequestSpecFactory.getRequestSpec(serviceName, accountName);
-        context.set("REQUEST_SPEC", requestSpecification);
     }
 
     @Given("I send a {string} request to {string} with json body")
@@ -107,4 +101,3 @@ public class RequestSteps {
         }
     }
 }
-
