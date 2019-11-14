@@ -1,6 +1,4 @@
-package org.fundacionjala.core.cucumber.steps;
-
-import java.util.Map;
+package org.fundacionjala.sfdc.core.cucumber.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,13 +6,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.fundacionjala.sfdc.core.JsonHelper;
+import org.fundacionjala.sfdc.core.ScenarioContext;
+import org.fundacionjala.sfdc.core.api.DynamicIdHelper;
+import org.fundacionjala.sfdc.core.api.RequestManager;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 
-import org.fundacionjala.core.JsonHelper;
-import org.fundacionjala.core.ScenarioContext;
-import org.fundacionjala.core.api.DynamicIdHelper;
-import org.fundacionjala.core.api.RequestManager;
+import java.util.Map;
 
 public class RequestSteps {
 

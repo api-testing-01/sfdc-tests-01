@@ -1,4 +1,4 @@
-package org.fundacionjala.core;
+package org.fundacionjala.sfdc.core;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,9 +22,11 @@ public class ScenarioContext {
     public void set(final String key, final Object response) {
         map.put(key, response);
     }
+
     public void addEndpoint(final String endpoint) {
         endpoints.add(endpoint);
     }
+
     public List<String> getEndpoints() {
         return endpoints;
     }

@@ -1,7 +1,7 @@
-package org.fundacionjala.core.api;
+package org.fundacionjala.sfdc.core.api;
 
 import io.restassured.response.Response;
-import org.fundacionjala.core.ScenarioContext;
+import org.fundacionjala.sfdc.core.ScenarioContext;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
