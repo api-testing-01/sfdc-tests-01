@@ -1,11 +1,10 @@
-package org.fundacionjala.core;
+package org.fundacionjala.sfdc.core;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import org.json.simple.JSONObject;
 
-public final class Environment {
-
+public class Environment {
     private static Environment instance = new Environment();
 
     private DocumentContext jsonContext;
