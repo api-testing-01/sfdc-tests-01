@@ -1,0 +1,22 @@
+{
+  "Name": "Account0003 created by cucumber",
+  "Type": "Prospect",
+  "BillingStreet": "Simon Lopez",
+  "BillingCity": "Quillacollo",
+  "BillingState": "Cochabamba",
+  "BillingPostalCode": "1008",
+  "BillingCountry": "Bolivia",
+  "ShippingStreet": "Av Santa cruz S/N",
+  "ShippingCity": "Cercado",
+  "ShippingState": "Bolivia",
+  "ShippingPostalCode": "1008",
+  "ShippingCountry": "Bolivia",
+  "Phone": "59167777777",
+  "Fax": "59144444444",
+  "Website": "www.local.com",
+  "Sic": "12312",
+  "Industry": "Banking",
+  "AnnualRevenue": 333333,
+  "NumberOfEmployees": 70,
+  "Description": "description"
+}
