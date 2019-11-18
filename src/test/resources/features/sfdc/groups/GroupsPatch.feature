@@ -14,10 +14,9 @@ Feature: Groups Post
     When I send a "PATCH" request to "/sobjects/Group/{g.id}" with json body
     """
     {
-    "Name": "Group edited",
-    "Email": "bruxita2312@gmail.com"
+    "Name": "Group edited"
     }
     """
     Then I validate the response has status code 204
-    And I send a DELETE request to "/sobjects/Group/{g.id}"
+    And I send a "DELETE" request to "/sobjects/Group/{g.id}"
     And I validate the response has status code 204
