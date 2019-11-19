@@ -4,7 +4,8 @@ import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import org.json.simple.JSONObject;
 
-public class Environment {
+public final class Environment {
+
     private static Environment instance = new Environment();
 
     private DocumentContext jsonContext;
@@ -22,4 +23,5 @@ public class Environment {
     public String getValue(final String keyJsonPath) {
         return jsonContext.read(keyJsonPath);
     }
+
 }
