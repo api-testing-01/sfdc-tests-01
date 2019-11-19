@@ -4,7 +4,7 @@ Feature: Groups Post
     Given I use the "sfdc" service and the "admin" account
 
 
-  @cleanGroups
+  @cleanData
   Scenario: Create group with only name
     When I send a "POST" request to "/sobjects/Group" with json body
     """
@@ -15,7 +15,7 @@ Feature: Groups Post
     And I save the response as "g"
     Then I validate the response has status code 201
 
-  @cleanGroups
+  @cleanData
   Scenario: Create group with only name
     When I send a "POST" request to "/sobjects/Group" with json body
     """
