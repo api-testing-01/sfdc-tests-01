@@ -10,7 +10,7 @@ Feature: Groups Patch
     """
     And I save the response as "g"
 
-  @cleanGroups
+  @cleanData
   Scenario: PATCH Groups
     When I send a "PATCH" request to "/sobjects/Group/{g.id}" with json body
     """
