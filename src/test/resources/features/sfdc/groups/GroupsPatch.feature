@@ -1,4 +1,4 @@
-Feature: Groups Post
+Feature: Groups Patch
 
   Background:
     Given I use the "sfdc" service and the "admin" account
@@ -10,6 +10,7 @@ Feature: Groups Post
     """
     And I save the response as "g"
 
+  @cleanGroups
   Scenario: PATCH Groups
     When I send a "PATCH" request to "/sobjects/Group/{g.id}" with json body
     """
