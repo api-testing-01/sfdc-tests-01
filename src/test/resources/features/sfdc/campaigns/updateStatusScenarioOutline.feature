@@ -9,14 +9,25 @@ Feature: Campaigns
     }
     """
     And I save the response as "C"
+    And I save the request endpoint for deleting
 
-  Scenario: PATCH Campaigns
+  @cleanData
+  Scenario Outline: PATCH Campaigns
     When I send a "PATCH" request to "/sobjects/Campaign/{C.id}" with json body
     """
     {
-    "Status": "In Progress"
+    "Status": "<status>"
     }
     """
     Then I validate the response has status code 204
-    And I send a "DELETE" request to "/sobjects/Campaign/{C.id}"
-    And I validate the response has status code 204
+    And I send a "GET" request to "/sobjects/Campaign/{C.id}"
+    And I validate the response has status code 200
+    And I validate the response contains "Status" equals "<status>"
+
+    Examples:
+      | status  |
+      | Planned |
+      | In Progress |
+      | Completed |
+      | Aborted |
+
