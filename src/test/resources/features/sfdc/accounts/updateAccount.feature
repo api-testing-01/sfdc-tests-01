@@ -4,6 +4,7 @@ Feature: Account
     Given I use the "sfdc" service and the "admin" account
     And I send a "POST" request to "/sobjects/account" with json file "json/createAccountBody.json"
     And I save the response as "P"
+    And I save the request endpoint for deleting
 
   @cleanData
   Scenario: PATCH account
@@ -18,5 +19,4 @@ Feature: Account
       | BillingState     | Cochabamba updated                       |
       | BillingPostalCode| 1009                                     |
       | BillingCountry   | Bolivia updated                          |
-    And I send a "DELETE" request to "/sobjects/account/{P.id}"
-    And I validate the response has status code 204
+

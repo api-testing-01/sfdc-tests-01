@@ -5,7 +5,6 @@ Feature: Account
     And I send a "POST" request to "/sobjects/account" with json file "json/createAccountBody.json"
     And I save the response as "P"
 
-  @cleanData
   Scenario: DELETE account
     When I send a "DELETE" request to "/sobjects/account/{P.id}"
     Then I validate the response has status code 204
