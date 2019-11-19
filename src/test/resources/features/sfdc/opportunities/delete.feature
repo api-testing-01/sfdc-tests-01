@@ -17,3 +17,6 @@ Feature: Opportunities
   Scenario: DELETE Opportunities
     When I send a "DELETE" request to "/sobjects/Opportunity/{O.id}"
     Then I validate the response has status code 204
+    And  I send a "GET" request to "/sobjects/Opportunity/{O.id}"
+    And I validate the response contains "errorCode" equals "[NOT_FOUND]"
+    And I validate the response contains "message" equals "[The requested resource does not exist]"
