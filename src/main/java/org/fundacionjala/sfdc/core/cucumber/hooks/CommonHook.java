@@ -1,9 +1,7 @@
 package org.fundacionjala.sfdc.core.cucumber.hooks;
 
 import io.cucumber.java.After;
-import io.restassured.internal.RestAssuredResponseImpl;
 import io.restassured.specification.RequestSpecification;
-import org.fundacionjala.sfdc.core.JsonHelper;
 import org.fundacionjala.sfdc.core.ScenarioContext;
 import org.fundacionjala.sfdc.core.api.RequestManager;
 
