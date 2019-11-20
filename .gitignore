@@ -5,7 +5,6 @@
 *.iml
 /java/
 config.json
-config.json.dist
 /gradle/
 gradlew
 gradlew.bat
