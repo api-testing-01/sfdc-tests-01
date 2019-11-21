@@ -9,20 +9,19 @@ Feature: Groups Get
     }
     """
     And I save the response as "g"
+    And I save the request endpoint for deleting
 
   @cleanData
   Scenario: Search for an existing group
     When I send a "GET" request to "/sobjects/Group/{g.id}"
     Then I validate the response has status code 200
 
+  @cleanData
   Scenario: Search for a non existing group
     When I send a "GET" request to "/sobjects/Group/0"
     Then I validate the response has status code 404
-    And I send a "DELETE" request to "/sobjects/Group/{g.id}"
-    And I validate the response has status code 204
 
+  @cleanData
   Scenario: Search for a non existing group
     When I send a "GET" request to "/sobjects/Group/00G4P000003yfhoUAA"
     Then I validate the response has status code 404
-    And I send a "DELETE" request to "/sobjects/Group/{g.id}"
-    And I validate the response has status code 204

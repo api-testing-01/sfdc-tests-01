@@ -99,4 +99,11 @@ public class RequestSteps {
             }
         }
     }
+
+
+    @And("I validate the response contains {string} not equals {string}")
+    public void iValidateTheResponseContainsNotEquals(final String attribute, final String expectedValue) {
+        String actualProjectName = response.jsonPath().getString(attribute);
+        Assert.assertNotEquals(actualProjectName, expectedValue);
+    }
 }
