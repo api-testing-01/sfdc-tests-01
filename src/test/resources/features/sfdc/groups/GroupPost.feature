@@ -10,6 +10,7 @@ Feature: Groups Post
     }
     """
     And I save the response as "g"
+    And I save the request endpoint for deleting
     Then I validate the response has status code 201
 
   @cleanData
@@ -24,4 +25,18 @@ Feature: Groups Post
     }
     """
     And I save the response as "g"
+    And I save the request endpoint for deleting
     Then I validate the response has status code 201
+
+  @cleanData
+  Scenario: Create group without name
+    Given I use the "sfdc" service and the "admin" account
+    When I send a "POST" request to "/sobjects/Group" with json body
+    """
+    {
+    "Name": ""
+    }
+    """
+    And I save the response as "g"
+    And I save the request endpoint for deleting
+    Then I validate the response has status code 400
